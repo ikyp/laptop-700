@@ -20,7 +20,7 @@
       - *Disable Secure Boot*
       - *Enable UEFI Boot*
    2. Partition
-      - HardDisk use *GPT*(_GUID partiton table_) format
+      - HardDisk use *GPT* ( _GUID partiton table_ ) format
       - Must has a *FAT32* block mount to */boot/efi* and set _FLAG_ to *esp*
 	In my laptop, i set 8GB with that
 	Because the *SSD* has 8GB
