@@ -8,21 +8,29 @@
 
 ** Hardware
   - 8GB *SSD* & 500GB *HDD*
+
     The SSD is a firmware part of HDD
+
   - 4GB RAM
   - i5-6300-HQ CPU
 
 ** Linux install
    *UEFI*
+
    [[https://wiki.manjaro.org/index.php?title=BIOS_and_UEFI][BIOS and UEFI (Manjaro Wiki)]]
+
    Attention:
+
    1. BIOS
       - *Disable Secure Boot*
       - *Enable UEFI Boot*
+
    2. Partition
       - HardDisk use *GPT* ( _GUID partiton table_ ) format
       - Must has a *FAT32* block mount to */boot/efi* and set _FLAG_ to *esp*
+
 	In my laptop, i set 8GB with that
+
 	Because the *SSD* has 8GB
 
    My laptop mount is */*, */boot/efi*, */home*, */usr/local*
