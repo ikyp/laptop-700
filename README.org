@@ -17,10 +17,12 @@
     
 ** Linux install
    *Back to Arch*
+
    [[hhttps://wiki.archlinux.org/index.php/Installation_guide][Arch Install Guide]]
 
 
    *UEFI*
+
    [[https://wiki.archlinux.org/index.php/Installation_guide][EFI System Partition]]
 
    [[https://wiki.archlinux.org/index.php/Partitioning][Partitioning]]
@@ -43,10 +45,15 @@
    My laptop mount is */(50G)*, */boot/efi(8G)*, */home(300G)*, */usr/local(100)*
 
    ~efibootmgr~
+
    ~efitolls~
+
    ~efivar~
+
    ~dosfstool~
+
    ~os-prober~
+
    Above package must be *installed*.
 
 
