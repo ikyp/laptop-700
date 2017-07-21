@@ -1,10 +1,11 @@
 #+TITLE: *Laptop-700*
 #+AUTHOE: ikyp
-#+DATE: 2016-12-13 10:00 pm
+#+DATE: 2017-07-21
 -----
 
+
 * Intro
-  _All stuff about my Laptop-700_
+  _All stuff about my Laptop-700_ (Ver1.0)
 
 ** Hardware
   - 8GB *SSD* & 500GB *HDD*
@@ -13,13 +14,19 @@
 
   - 4GB RAM
   - i5-6300-HQ CPU
-
+    
 ** Linux install
+   *Back to Arch*
+   [[hhttps://wiki.archlinux.org/index.php/Installation_guide][Arch Install Guide]]
+
+
    *UEFI*
+   [[https://wiki.archlinux.org/index.php/Installation_guide][EFI System Partition]]
 
-   [[https://wiki.manjaro.org/index.php?title=BIOS_and_UEFI][BIOS and UEFI (Manjaro Wiki)]]
+   [[https://wiki.archlinux.org/index.php/Partitioning][Partitioning]]
 
-   Attention:
+
+   /Attention:/
 
    1. BIOS
       - *Disable Secure Boot*
@@ -33,6 +40,27 @@
 
 	Because the *SSD* has 8GB
 
-   My laptop mount is */*, */boot/efi*, */home*, */usr/local*
+   My laptop mount is */(50G)*, */boot/efi(8G)*, */home(300G)*, */usr/local(100)*
 
-** To be *continued*
+   ~efibootmgr~
+   ~efitolls~
+   ~efivar~
+   ~dosfstool~
+   ~os-prober~
+   Above package must be *installed*.
+
+
+   *GRUB*
+   #+BEGIN_EXAMPLE
+   grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
+   grub-mkconfig -o /boot/grub/grub.cfg
+   #+END_EXAMPLE
+   
+
+** After Install
+   Login in system, need do something to let system work as normal.
+   1. Enable Network
+      - use ~systemctrl~ enable *dhcpcd* & *NetworkManager* service.
+   2. Enable Dispaly Manager
+      - use ~systemctrl~ enable *Lxdm* (I use this) 
+   3. Use ~pacman~ update package database and upgrade.
